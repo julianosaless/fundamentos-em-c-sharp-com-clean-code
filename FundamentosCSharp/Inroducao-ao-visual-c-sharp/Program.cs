@@ -4,43 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inroducao_ao_visual_c_sharp
+namespace Calculadora
 {
     class Program
     {
         static void Main(string[] args)
         {
+            const decimal primeiroNumero = 10;
+            const decimal segundoNumero = 20;
 
-            string nomeDoFuncionario = "Juliano";
-            string cargoDoFuncionario = "Programador";
-            decimal salario = 100.00m;
-            DateTime dataDeAniversario = DateTime.Now.Date;
-            char tipoDeSexo = 'M';
-            bool possuiFerias = true;
+            var calculadora = new Calculadora(primeiroNumero, segundoNumero);
 
-            Console.WriteLine("Nome do funcionario:" + nomeDoFuncionario);
-            Console.WriteLine("Cargo do funcionario:" + cargoDoFuncionario);
-            Console.WriteLine("Salario do funcionario:" + salario);
-            Console.WriteLine("Tipo do Sexo:" + tipoDeSexo);
-            Console.WriteLine("Date de Aniversario:" + dataDeAniversario);
-            Console.WriteLine("Possui ferias:" + possuiFerias);
-
+            Console.WriteLine(calculadora.Calcular());
+            Console.WriteLine(calculadora.Subtrair());
             Console.ReadKey();
-
-            OperadoresAritmeticos();
-
-            Console.WriteLine(ONumeroEPar(3));
-
-            Console.ReadKey();
-
-
-            int precedencia = 2 + 3 * 4;
-
-            Console.WriteLine(precedencia);
-
-            Console.ReadKey();
-
-            IncrementoDecremento();
         }
 
         static void OperadoresAritmeticos()
